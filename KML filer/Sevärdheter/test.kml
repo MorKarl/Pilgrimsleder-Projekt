@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>VstraSigfrid_sites.kmz</name>
+	<open>1</open>
+	<Style id="sh_H22-1">
+		<IconStyle>
+			<Icon>
+				<href>https://sites.google.com/site/klmtest2visitvarnamo/home/sites.png?attredirects=0</href>
+			</Icon>
+			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_H22-1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_H22-1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_H22-1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_H22-1">
+		<IconStyle>
+			<Icon>
+				<href>https://sites.google.com/site/klmtest2visitvarnamo/home/sites.png?attredirects=0</href>
+			</Icon>
+			<hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Placemark>
+		<name>Ohsabanan</name>
+		<LookAt>
+			<longitude>14.40706619184237</longitude>
+			<latitude>57.1832063450951</latitude>
+			<altitude>0</altitude>
+			<heading>-0.2969793544498794</heading>
+			<tilt>7.856258303814467</tilt>
+			<range>26041.71532614917</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#msn_H22-1</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>14.40706619184237,57.18320634509511,0</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

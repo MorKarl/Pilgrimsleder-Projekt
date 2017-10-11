@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<title> TESTING GMAPS </title>
+<body>
+
+<h1>Pilgrimsleder</h1>
+
+<!--<div class="container">
+<div class="dropdown">
+  <button onclick="drpdwnClick()" class="dropbtn">Leder</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Munkaleden</a>
+    <a href="#">Nydalaleden</a>
+    <a href="#">V:stra Sigfridsleden</a>
+    </div>
+</div>
+</div> -->
+
+<div id="map" style="width:50%;height:400px;"></div>
+<p id ="demo"></p>
+
+<script>
+
+  function drpdwnClick() {
+
+    document.getElementById("myDropdown").classList.toggle("show");
+    
+  }
+
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+	var src_munka = 'https://sites.google.com/site/klmtest2visitvarnamo/home/Munkaleden.kmz?attredirects=0&d=1';
+	var src_nydala = 'https://sites.google.com/site/klmtest2visitvarnamo/home/Nydalaleden.kmz?attredirects=0&d=1';
+	var src_sigfrid = 'https://sites.google.com/site/klmtest2visitvarnamo/home/V%C3%A4stra%20Sigfridsleden.kmz?attredirects=0&d=1';
+  var src_sigfrid_sites = 'https://sites.google.com/site/klmtest2visitvarnamo/home/test.kml?attredirects=0&d=1';
+	var map;
+
+function myMap() {
+
+  
+
+var map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(57.32087255, 14.34058452),
+          zoom: 9,
+          mapTypeId: 'terrain'
+        });
+
+var kmlLayer_sigfrid = new google.maps.KmlLayer(src_sigfrid, { 
+  suppressInfoWindows: true,
+  preserveViewport: true,
+  map: map
+  });
+
+var kmlLayer_munka = new google.maps.KmlLayer(src_munka, {
+          suppressInfoWindows: true,
+          preserveViewport: false,
+          map: map
+        });
+
+var kmlLayer_nydala = new google.maps.KmlLayer(src_nydala, { 
+	suppressInfoWindows: true,
+	preserveViewport: false,
+	map: map
+	});
+
+
+
+/*var kmlLayer_sigfrid_sites = new google.maps.KmlLayer(src_sigfrid_sites, { 
+  suppressInfoWindows: true,
+  preserveViewport: false,
+  map: map
+  });*/
+
+}
+//57.32087255,14.34058452
+//document.getElementById("demo").innerHTML = src;
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDQ-uxau8kTl-DuwEUUfBk07lnLTokvx8&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
